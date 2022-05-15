@@ -1,5 +1,5 @@
 # Gu-Stickers
-一个用于添加 argon WordPress 主题表情的插件
+一个用于添加 WordPress 主题 argon 的评论表情的插件
 
 # 目前表情缓慢更新中....
 
