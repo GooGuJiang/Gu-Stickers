@@ -2,7 +2,7 @@
 /*
 Plugin Name: Gu Stickers
 Description: 咕谷的私用表情
-Version: 1.0.1
+Version: 0.0.1
 */
     function add_more_emotions($emotionList){
         $gu_img_url = WP_PLUGIN_URL."/".dirname(plugin_basename(__FILE__));
