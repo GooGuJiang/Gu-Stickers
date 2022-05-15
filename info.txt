@@ -1,0 +1,35 @@
+array(
+        array(
+            'groupname' => '颜文字', 
+            'list' => array(
+                array('type' => 'text', 'text' => "|´・ω・)ノ"),
+                array('type' => 'text', 'text' => "ヾ(≧∇≦*)ゝ"),
+                array('type' => 'text', 'text' => "(☆ω☆)")
+            )
+        ),
+        array(
+            'groupname' => 'Emoji', 
+            'list' => array(
+                array('type' => 'text', 'text' => "😂"),
+                array('type' => 'text', 'text' => "😀"),
+                array('type' => 'text', 'text' => "😅")
+            )
+        ),
+        array(
+            'groupname' => '小恐龙', 
+            'list' => array(
+                array('type' => 'sticker', 'code' => 'dinosaur-shy', 'src' => $GLOBALS['assets_path'] . '/stickers/dinosaur/1.jpg'),
+                array('type' => 'sticker', 'code' => 'dinosaur-daze', 'src' => $GLOBALS['assets_path'] . '/stickers/dinosaur/2.jpg'),
+                array('type' => 'sticker', 'code' => 'dinosaur-sweat', 'src' => $GLOBALS['assets_path'] . '/stickers/dinosaur/3.jpg'),
+            )
+        ),
+        array(
+            'groupname' => '花!', 
+            'list' => array(
+                array('type' => 'sticker', 'code' => 'flower-flower', 'src' => $GLOBALS['assets_path'] . '/stickers/flower/1.jpg'),
+                array('type' => 'sticker', 'code' => 'flower-grass', 'src' => $GLOBALS['assets_path'] . '/stickers/flower/2.jpg'),
+                array('type' => 'sticker', 'code' => 'flower-leaf', 'src' => $GLOBALS['assets_path'] . '/stickers/flower/3.jpg'),
+            ),
+            'description' => 'Source: github.com/k4yt3x/flowerhd'
+        )
+    );
