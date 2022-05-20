@@ -25,6 +25,8 @@
  */
 
 
+
+
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -43,14 +45,20 @@ define( 'PLUGIN_NAME_VERSION', '0.0.2' );
 
 $getback = plugin_dir_path(__FILE__).'backup';
 $getback_file = plugin_dir_path(__FILE__).'backup/emotions.php';
+$getcopy_file = plugin_dir_path(__FILE__).'data/emotions.php';
 if(!file_exists($getback)){
     mkdir($getback);
 }
 if(!file_exists($getback_file)){
+    $data_name = plugin_dir_path(__FILE__).'data/data.json';
+    $data_name_input = fopen($data_name , "w");
+    fwrite($data_name_input, json_encode($emotionListDefault));
+    fclose($data_name_input);
     copy(get_template_directory()."/emotions.php",$getback_file);
+    copy($getcopy_file,get_template_directory()."/emotions.php");
 }
 
-function deactivate_plugin_gu() {
+function deactivate_plugin_gu() {//卸载清除函数
     $getback = plugin_dir_path(__FILE__).'backup';
     $getback_file = plugin_dir_path(__FILE__).'backup/emotions.php';
     if(file_exists($getback_file)){
@@ -78,7 +86,7 @@ function gu_stickers_plugin_menu() {
 }
 /** 将菜单函数注册到钩子中 */
 add_action( 'admin_menu', 'gu_stickers_plugin_menu' );
-
+//加载表情
     }
 }else {
     add_action('admin_notices', 'gu_error');//主题错误提示
